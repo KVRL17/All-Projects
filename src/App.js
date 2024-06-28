@@ -1,25 +1,153 @@
-import logo from './logo.svg';
 import './App.css';
+import React from "react";
+import Typography from "@mui/material/Typography";
+import { Box } from '@mui/material';
+import { Link as RouterLink, BrowserRouter as Router } from "react-router-dom";
+import weather from './Images/image.jpeg';
+import logo from './Images/logo.jpg';
+import resume from './Images/resume.jpeg';
+import heros from './Images/main.jpeg';
+import games from './Images/mainimage.jpeg';
+import fight from './Images/img.jpeg';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Typography variant='h2'>Hi, This is Venkata Ramana.<br />These are my Projects</Typography>
+      <div className='tasks'>
+        <div className='comp1'>
+          <Box className="box">
+            <Typography
+              sx={{
+                textDecoration: "none",
+                color: "Orangered",
+                marginBottom: "10px",
+              }}
+              component={RouterLink}
+              to="https://attendenceapp-nine.vercel.app/"
+              variant="h6"
+            >
+              <img src={logo} style={{ height: '125px', width: '125px' }} alt='mainimage' /><br />
+              Attendence
+            </Typography>
+            <Typography className="box-function">App</Typography>
+          </Box>
+          <Box className="box">
+            <Typography
+              sx={{
+                textDecoration: "none",
+                color: "Orangered",
+                marginBottom: "10px",
+              }}
+              component={RouterLink}
+              to=""
+              variant="h6"
+            >
+              <img src="" style={{ height: '100px', width: '145px' }} alt='mainimage' /><br />
+              Netflix
+            </Typography>
+            <Typography className="box-function">Clone</Typography>
+          </Box>
+          <Box className="box">
+            <Typography
+              sx={{
+                textDecoration: "none",
+                color: "Orangered",
+                marginBottom: "10px",
+              }}
+              component={RouterLink}
+              to="https://venkata-ramana-karri-portfolio.app/"
+              variant="h6"
+            >
+              <img src={resume} style={{ height: '125px', width: '125px' }} alt='mainimage' /><br />
+              Portfolio
+            </Typography>
+            <Typography className="box-function">Web page</Typography>
+          </Box>
+        </div>
+        <br />
+        <div className='comp2'>
+          <Box className="box">
+            <Typography
+              sx={{
+                textDecoration: "none",
+                color: "Orangered",
+                marginBottom: "10px",
+              }}
+              component={RouterLink}
+              to="https://fighting-game-flax.vercel.app/"
+              variant="h6"
+            >
+              <img src={fight} style={{ height: '125px', width: '125px' }} alt='mainimage' /><br />
+              Fighting
+            </Typography>
+            <Typography className="box-function">Game</Typography>
+          </Box>
+          <Box className="box">
+            <Typography
+              sx={{
+                textDecoration: "none",
+                color: "Orangered",
+                marginBottom: "10px",
+              }}
+              component={RouterLink}
+              to="https://wheather-app-coral.vercel.app/"
+              variant="h6"
+            >
+              <img src={weather} style={{ height: '125px', width: '125px' }} alt='mainimage' /><br />
+              Weather
+            </Typography>
+            <Typography className="box-function">App</Typography>
+          </Box>
+          <Box className="box">
+            <Typography
+              sx={{
+                textDecoration: "none",
+                color: "Orangered",
+                marginBottom: "10px",
+              }}
+              component={RouterLink}
+              to="https://superhero-app-three.vercel.app/"
+              variant="h6"
+            >
+              <img src={heros} style={{ height: '125px', width: '125px' }} alt='mainimage' /><br />
+              Super Hero
+            </Typography>
+            <Typography className="box-function">App</Typography>
+          </Box>
+          <Box className="box">
+            <Typography
+              sx={{
+                textDecoration: "none",
+                color: "Orangered",
+                marginBottom: "10px",
+              }}
+              component={RouterLink}
+              to="https://react-counter-app-jeua.vercel.app/"
+              variant="h6"
+            >
+              <img src={games} style={{ height: '125px', width: '125px' }} alt='mainimage' /><br />
+              Rock Paper Scissor
+            </Typography>
+            <Typography className="box-function">Game</Typography>
+          </Box>
+        </div>
+      </div>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
     </div>
   );
 }
 
-export default App;
+function RootApp() {
+  return (
+    <Router>
+      <App />
+    </Router>
+  );
+}
+
+export default RootApp;
