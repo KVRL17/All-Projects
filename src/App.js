@@ -56,7 +56,7 @@ function App() {
                 marginBottom: "10px",
               }}
               component={RouterLink}
-              to="https://venkata-ramana-karri-portfolio.app/"
+              to="https://venkata-ramana-karri-portfolio.vercel.app/"
               variant="h6"
             >
               <img src={resume} style={{ height: '125px', width: '125px' }} alt='mainimage' /><br />
